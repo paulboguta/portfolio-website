@@ -1,14 +1,13 @@
 import {React, useState} from 'react'
-import styled from 'styled-components'
 import LandingPageTyping from './LandingPageTyping'
 import LandingPageMe from './LandingPageMe'
 import LandingPageButton from './LandingPageButton'
 import './LandingPage.scss'
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   const [isActive, setIsActive] = useState(true);
   const [showButton, setShowButton] = useState(false);
-  const [clicked, setClicked] = useState(false);
+ 
 
   const eventHandler = (e) => {
     e.preventDefault();
@@ -28,16 +27,13 @@ const LandingPage = () => {
     }, 10000);
   }
 
-  const clickHandler = (e) => {
-    e.preventDefault();
-    setClicked(current => !current)
-  }
+  
   
   return (
     <>
       {isActive ? <LandingPageMe handleEvent={eventHandler}/> : null}
       {isActive ? null : <LandingPageTyping />}
-      {showButton ? <LandingPageButton clickHandler={clickHandler}/> : null}
+      {showButton ? <LandingPageButton clickHandle={props.clickHandle}/> : null}
     </>
   )
 }

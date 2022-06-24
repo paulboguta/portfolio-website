@@ -1,16 +1,13 @@
-import React from "react";
+import {React} from "react";
 import "./App.scss";
-import LandingPage from "./Components/LandingPage/LandingPage";
-import Skills from "./Components/Skills/Skills";
+import UI from "./Components/UI/UI";
 
 const App = () => {
-
   
   return(
-    <React.Fragment> 
-      <LandingPage />
-      <Skills />
-    </React.Fragment>
+    <> 
+      <UI />
+    </>
     ) 
 };
 
