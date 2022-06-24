@@ -21,6 +21,12 @@ const LandingPage = (props) => {
     buttonHandler();
   }
 
+  window.onscroll = e => {
+    e.preventDefault();
+    setIsActive(current => current === true ? !current : current);
+    buttonHandler();
+  }
+
   const buttonHandler = () => {
     setTimeout(() => {
       setShowButton(true)

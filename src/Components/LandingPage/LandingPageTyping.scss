@@ -68,3 +68,22 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        font-size: 48px;
+    }
+    .dynamic-texts {
+        line-height: 60px;
+    }
+
+    .wrapper span {
+        font-size: 32px;
+    }
+
+    span::after {
+        top: 3px;
+    }
+}
