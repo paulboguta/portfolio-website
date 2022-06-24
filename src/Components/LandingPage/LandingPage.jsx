@@ -15,13 +15,9 @@ const LandingPage = (props) => {
       buttonHandler();
   }
   
-  window.onkeydown = e => {
-    e.preventDefault();
-    setIsActive(current => current === true ? !current : current);
-    buttonHandler();
-  }
 
-  window.onscroll = e => {
+
+  window.onkeypress= e => {
     e.preventDefault();
     setIsActive(current => current === true ? !current : current);
     buttonHandler();
@@ -30,7 +26,7 @@ const LandingPage = (props) => {
   const buttonHandler = () => {
     setTimeout(() => {
       setShowButton(true)
-    }, 10000);
+    }, 6500);
   }
 
   

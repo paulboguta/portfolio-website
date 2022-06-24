@@ -6,7 +6,7 @@ const LandingPageButton = (props) => {
 
   return (
     <Button onClick={props.clickHandle}>
-      <span>Get to know me</span>
+      <span>let's get started</span>
     </Button>
   );
 };
@@ -57,7 +57,7 @@ const Button = styled.button`
 }
 
   & span {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Space Mono', sans-serif;
     font-size: 32px;
     font-weight: 400;
   }

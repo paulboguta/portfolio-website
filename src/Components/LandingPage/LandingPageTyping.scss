@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
 
 .wrapper {
     display: inline-flex;
     font-family: 'Poppins', sans-serif;
     font-size: 60px;
     transition: 0.3s ease-in;
-    animation: delete 0s ease-in 9.1s;
+    animation: delete 0s ease-in 6.05s;
     animation-fill-mode: forwards;
 
         @keyframes delete {

@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import LandingPage from '../LandingPage/LandingPage'
-import Skills from '../Skills/Skills'
+import About from '../AboutPage/About'
 import './UI.scss'
 
 const UI = () => {
@@ -15,7 +15,7 @@ const UI = () => {
     return (
     <> 
         {clicked ? null : <LandingPage clickHandle={clickHandler}/>}
-        {clicked ? <Skills /> : null}
+        {clicked ? <About /> : null}
       </>
   )
 }

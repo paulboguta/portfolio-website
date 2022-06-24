@@ -8,9 +8,7 @@ const LandingPageTyping = () => {
     <div className='static-text'>I'm a </div>
     <ul className='dynamic-texts'>
         <li><span>Frontend Developer</span></li>
-        
         <li><span>Tech Passionate</span></li>
-        <li><span>Freelancer</span></li>
     </ul>
 </div>
   )
