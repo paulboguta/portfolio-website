@@ -1,6 +1,7 @@
 import React from 'react'
 import "./LandingPageTyping.scss"
 
+
 const LandingPageTyping = () => {
   return (
     <div className='wrapper'>
