@@ -5,13 +5,13 @@
 .container {
   font-size: 60px;
   display: inline-flex;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins);
 
     div {
         animation: slide-in-elliptic-bottom-fwd 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
        
         span {
-            color: #fff;
+            color: var(--white);
         }
     }
 
@@ -46,7 +46,7 @@
 
     .arrow {
         font-size: 40px;
-        color: #fff;
+        color: var(--white);
         display: flex;
         justify-content: center;
         align-items: center;

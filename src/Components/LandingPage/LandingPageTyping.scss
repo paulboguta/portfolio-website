@@ -2,7 +2,7 @@
 
 .wrapper {
     display: inline-flex;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-poppins);
     font-size: 60px;
     transition: 0.3s ease-in;
     animation: delete 0s ease-in 6.05s;
@@ -17,7 +17,7 @@
         }
 
     .static-text {
-        color: #fff;
+        color: var(--white);
         font-weight: 400;
     
     }
@@ -30,7 +30,7 @@
    
 
         li {
-            color: #FC6D6D;
+            color: var(--green);
             list-style: none;
             font-weight: 500;
             position: relative;
@@ -53,8 +53,8 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
-                background-color: #343F4F;
-                border-left: 2px solid #FC6D6D;
+                background-color: var(--dark-navy);
+                border-left: 2px solid var(--green);
                 animation: typing 3s steps(18) infinite;
             }
             @keyframes typing {               
