@@ -39,3 +39,31 @@ body {
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
+
+@keyframes slide-in-bottom {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+h1 {
+  color: var(--lightest-slate);
+  font-family: var(--font-poppins);
+}
+
+h2 {
+  color: var(--light-slate)
+}
+
+h3 {
+  color: var(--lightest-slate)
+}
+
+p {
+  color: var(--slate)
+}
