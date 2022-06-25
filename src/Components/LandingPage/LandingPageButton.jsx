@@ -13,7 +13,6 @@ const LandingPageButton = (props) => {
 
 const Button = styled.button`
   align-items: center;
-  appearance: none;
   background-color: #FCFCFD;
   border-radius: 4px;
   border-width: 0;
