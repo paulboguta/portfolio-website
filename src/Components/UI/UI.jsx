@@ -11,7 +11,9 @@ const UI = () => {
   //   setClicked(current => !current)
   //   console.log("click!")
   // }
+  
 
+  
   return (
     <>
       {/* {clicked ? null : <LandingPage clickHandle={clickHandler}/>}

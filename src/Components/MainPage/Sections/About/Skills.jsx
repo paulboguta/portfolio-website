@@ -23,7 +23,7 @@ const Skills = () => {
             ES6+
           </li>
           <li>
-            <DiReact /> React +<span>Redux</span>
+            <DiReact /> React <span>+ Redux</span>
           </li>
           <li>
             <FaNodeJs /> Node.JS
@@ -72,6 +72,10 @@ const List = styled.ul`
     display: flex;
     align-items: center;
     gap: 10px;
+
+    span {
+      font-style: italic;
+    }
 
     &:hover {
       color: var(--green);
