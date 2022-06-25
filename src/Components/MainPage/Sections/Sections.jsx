@@ -2,6 +2,8 @@ import React from "react";
 import Intro from "./Intro/Intro";
 import About from "./About/About";
 import Work from "./Work/Work";
+import Contact from "./Contact/Contact";
+import Attribution from "../Attribution";
 import styled from "styled-components";
 
 const Sections = () => {
@@ -10,6 +12,8 @@ const Sections = () => {
       <Intro />
       <About />
       <Work />
+      <Contact />
+      <Attribution />
     </Wrapper>
   );
 };
