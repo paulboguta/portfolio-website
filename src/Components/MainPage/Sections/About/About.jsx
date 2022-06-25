@@ -13,28 +13,33 @@ const About = () => {
   useEffect(() => {
     let timer1 = setTimeout(() => setShowSkills(true), 20000);
 
-    return () => {
-      clearTimeout(timer1);
-    };
+    
   }, []);
 
-  useEffect(() => {
-    if (!showSkills) {
-      let timer2 = setTimeout(() => {
+  let performTimer = 
+    useEffect(() => {
+
+     if(timer > 0) {
+      setTimeout(() => {
         setTimer(timer - 1);
-      }, 1000);
-      return () => {
-        clearTimeout(timer2);
-      };
+      }, 1000); 
     }
+
   }, [timer]);
+
 
   const clickTimerHandler = (e) => {
     e.preventDefault();
+    setTimer(0);
     setShowSkills(true);
-  }
+  };
 
- 
+  const clickSkillsHandler = (e) => {
+    e.preventDefault();
+    
+    setSkillsClicked(true);
+  };
+
   return (
     <Wrapper>
       <SectionHeader number="01." name="About Me" />
@@ -54,7 +59,7 @@ const About = () => {
             building something folks can use. My end goal is to be full stack
             dev with MERN stack, so it has just begun for me.
           </p>
-          {<Skills />}
+          {skillsClicked ? <Skills /> : null}
         </WrapperText>
         <WrapperSkillTimer>
           {showSkills ? null : (
@@ -62,7 +67,8 @@ const About = () => {
               {timer}:00
             </button>
           )}
-          {showSkills ? <ButtonL text="Skills" /> : null}
+          {!skillsClicked && showSkills ?            
+              <ButtonL text="Skills" handleClick={clickSkillsHandler} /> : null}
         </WrapperSkillTimer>
       </WrapperContent>
     </Wrapper>
@@ -110,13 +116,13 @@ const WrapperSkillTimer = styled.div`
 
   @keyframes color-change {
     0% {
-      color: var(--light-slate)
+      color: var(--light-slate);
     }
     50% {
-      color: var(--green)
+      color: var(--green);
     }
     100% {
-      color: var(--light-slate)
+      color: var(--light-slate);
     }
   }
 `;
