@@ -19,6 +19,7 @@ const Wrapper = styled.div`
 
         a {
             cursor: pointer;
+            text-decoration: none;
         }
     }
 
