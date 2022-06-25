@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const HeaderSection = (props) => {
   return (
-    <Link href={props.href}><span>{props.num}</span> {props.name}</Link>
+    <Link href={props.href}><span className='green-span'>{props.num}</span> {props.name}</Link>
   )
   }
 
@@ -17,9 +17,7 @@ const Link = styled.a`
       color: var(--green);
     }
 
-    & span {
-        color: var(--green)
-    }
+    
 `
 
 export default HeaderSection

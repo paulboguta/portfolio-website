@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
-  animation: slide-in-bottom 0.5s 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 0.5s 2.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   & span {
     writing-mode: vertical-rl;

@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   padding-top: 2rem;
   gap: 1rem;
-  animation: slide-in-bottom 1s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 1s 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   .icons {
     cursor: pointer;

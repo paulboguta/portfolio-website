@@ -1,69 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
 
 :root {
-    --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
-    --navy-shadow: rgba(2,12,27,0.7);
-    --dark-slate: #495670;
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
-    --green: #64ffda;
-    --green-tint: rgba(100,255,218,0.1);
-    --pink: #f57dff;
-    --blue: #57cbff;
-    --font-sans: 'Open Sans', sans-serif;
-    --font-mono: 'Space Mono', sans-serif;
-    --font-poppins: 'Poppins', sans-serif
+  --dark-navy: #020c1b;
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --pink: #f57dff;
+  --blue: #57cbff;
+  --font-sans: "Open Sans", sans-serif;
+  --font-mono: "Space Mono", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Open Sans', sans-serif;
+  display: flex;
+  background-color: var(--navy);
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
 }
 
 @keyframes slide-in-bottom {
-    0% {
-      transform: translateY(100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
   }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 h1 {
   color: var(--lightest-slate);
   font-family: var(--font-poppins);
+  font-size: 4.8rem;
 }
 
 h2 {
-  color: var(--light-slate)
+  color: var(--light-slate);
+  font-size: 3.2rem;
 }
 
 h3 {
-  color: var(--lightest-slate)
+  color: var(--lightest-slate);
+  font-size: 1.6rem;
 }
 
 p {
-  color: var(--slate)
+  color: var(--slate);
+  font-family: var(--font-poppins);
+}
+
+.green-span {
+  color: var(--green);
+  font-family: var(--font-mono);
 }
