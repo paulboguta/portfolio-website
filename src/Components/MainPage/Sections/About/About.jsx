@@ -83,6 +83,7 @@ const WrapperText = styled.div`
   width: 60%;
   p {
     margin-top: 1rem;
+    text-align: justify;
   }
 `;
 

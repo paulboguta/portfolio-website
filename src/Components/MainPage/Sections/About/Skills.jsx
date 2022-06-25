@@ -66,7 +66,7 @@ const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: var(--lightest-slate);
-
+  gap: 5px;
   li {
     list-style: none;
     display: flex;
