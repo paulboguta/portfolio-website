@@ -74,9 +74,6 @@ const WrapperTextContent = styled.div`
   gap: 0.5rem;
 
   width: 300px;
-  @media screen and (max-width: 400px) {
-    padding-right: 2rem;
-  }
 `;
 
 const TextBox = styled.div`
@@ -90,6 +87,10 @@ const TextBox = styled.div`
   p {
     padding: 1rem;
     font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 250px;
   }
 `;
 
