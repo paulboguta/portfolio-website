@@ -29,8 +29,11 @@ const Button = styled.button`
   transition: box-shadow 0.15s, transform 0.15s;
 
   @media screen and (max-width: 768px) {
-    padding-inline: 30px;
     height: 60px;
+  }
+
+  @media screen and (max-width: 370px) {
+    width: 80vw;
   }
 
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
