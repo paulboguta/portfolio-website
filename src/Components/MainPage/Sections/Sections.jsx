@@ -11,7 +11,7 @@ const Sections = () => {
     <Wrapper>
       <Intro />
       <About />
-      {/* <Work /> */}
+      <Work />
       <Contact />
       <Attribution />
     </Wrapper>

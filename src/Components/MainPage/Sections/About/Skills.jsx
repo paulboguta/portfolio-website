@@ -4,7 +4,14 @@ import GrayLine from "../../../Constants/GrayLine";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { DiJavascript1, DiReact } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
-import { SiStyledcomponents, SiSass, SiTypescript, SiNextdotjs, SiTailwindcss, SiBlockchaindotcom } from "react-icons/si";
+import {
+  SiStyledcomponents,
+  SiSass,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiBlockchaindotcom,
+} from "react-icons/si";
 import { IconContext } from "react-icons/lib";
 
 const Skills = () => {
@@ -12,8 +19,8 @@ const Skills = () => {
     <Wrapper>
       <h4 className="green-span">Skills:</h4>
       <GrayLine />
-        <IconContext.Provider value={{ className: "icons-skills" }}>
-      <List>
+      <IconContext.Provider value={{ className: "icons-skills" }}>
+        <List>
           <li>
             <AiOutlineHtml5 />
             HTML & CSS
@@ -35,16 +42,25 @@ const Skills = () => {
           <li>
             <SiSass /> Sass
           </li>
-      </List>
-      <h4 className="green-span">Learning / Want to learn one day</h4>
-      <GrayLine />
-      <List>
-        <li><SiTypescript/>TypeScript</li>
-        <li><SiNextdotjs/> NextJS</li>
-        <li><SiTailwindcss/> TailwindCSS</li>
-        <li><SiBlockchaindotcom/> Blockchain/Solidity</li>
-      </List>
-        </IconContext.Provider>
+        </List>
+        <h4 className="green-span">Learning / Want to learn one day</h4>
+        <GrayLine />
+        <List>
+          <li>
+            <SiTypescript />
+            TypeScript
+          </li>
+          <li>
+            <SiNextdotjs /> NextJS
+          </li>
+          <li>
+            <SiTailwindcss /> TailwindCSS
+          </li>
+          <li>
+            <SiBlockchaindotcom /> Blockchain/Solidity
+          </li>
+        </List>
+      </IconContext.Provider>
     </Wrapper>
   );
 };
@@ -86,7 +102,12 @@ const List = styled.ul`
 
   .icons-skills {
     font-size: 1.3rem;
-    color: var(--green-darker)
+    color: var(--green-darker);
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 

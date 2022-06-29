@@ -38,6 +38,20 @@ const Wrapper = styled.div`
     margin-top: 2rem;
     align-self: center;
   }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 3.6rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    p {
+    }
+  }
 `;
 
 export default Intro;

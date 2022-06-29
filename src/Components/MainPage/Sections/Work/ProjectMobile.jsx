@@ -4,15 +4,15 @@ import styled from "styled-components";
 import { IconContext } from "react-icons/lib";
 import { MdOutlineWebAsset } from "react-icons/md";
 
-const Project = (props) => {
+const ProjectMobile = (props) => {
   return (
     <Wrapper>
+      <span className="green-span">Featured Project</span>
       <img
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARIAAAC4CAMAAAAYGZMtAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlT3+AEVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8A8WoAAHxScUAAAAAAElFTkSuQmCC"
         alt="Project 1 screenshot"
       />
       <WrapperTextContent>
-        <span className="green-span">Featured Project</span>
         <h3>{props.projectName}</h3>
         <TextBox>
           <p>{props.description}</p>
@@ -39,13 +39,28 @@ const Project = (props) => {
 
 const Wrapper = styled.div`
   margin-top: 2rem;
-  margin-bottom: 8rem;
   display: flex;
-  gap: 3rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+
+  span {
+    align-self: flex-start;
+  }
 
   img {
-    height: 250px;
-    margin-left: 5rem;
+    margin-left: -30px;
+    width: 300px;
+    height: 200px;
+    align-self: flex-start;
+  }
+
+  @media screen and (max-width: 400px) {
+    img {
+      width: 250px;
+      height: 160px;
+      margin-left: -20px;
+    }
   }
 `;
 
@@ -56,13 +71,16 @@ const WrapperTextContent = styled.div`
   gap: 0.5rem;
 
   width: 300px;
+  @media screen and (max-width: 400px) {
+    padding-right: 2rem;
+  }
 `;
 
 const TextBox = styled.div`
   background-color: var(--lightest-navy);
-  height: 100px;
+  height: 140px;
   border-radius: 4px;
-  width: 400px;
+  width: 300px;
   z-index: 99;
   box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 1);
 
@@ -100,4 +118,4 @@ const WrapperIcons = styled.div`
   }
 `;
 
-export default Project;
+export default ProjectMobile;

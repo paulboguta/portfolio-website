@@ -12,21 +12,15 @@ const About = () => {
 
   useEffect(() => {
     let timer1 = setTimeout(() => setShowSkills(true), 20000);
-
-    
   }, []);
 
-  let performTimer = 
-    useEffect(() => {
-
-     if(timer > 0) {
+  let performTimer = useEffect(() => {
+    if (timer > 0) {
       setTimeout(() => {
         setTimer(timer - 1);
-      }, 1000); 
+      }, 1000);
     }
-
   }, [timer]);
-
 
   const clickTimerHandler = (e) => {
     e.preventDefault();
@@ -36,7 +30,7 @@ const About = () => {
 
   const clickSkillsHandler = (e) => {
     e.preventDefault();
-    
+
     setSkillsClicked(true);
   };
 
@@ -67,8 +61,9 @@ const About = () => {
               {timer}:00
             </button>
           )}
-          {!skillsClicked && showSkills ?            
-              <ButtonL text="Skills" handleClick={clickSkillsHandler} /> : null}
+          {!skillsClicked && showSkills ? (
+            <ButtonL text="Skills" handleClick={clickSkillsHandler} />
+          ) : null}
         </WrapperSkillTimer>
       </WrapperContent>
     </Wrapper>
@@ -85,15 +80,26 @@ const WrapperText = styled.div`
     margin-top: 1rem;
     text-align: justify;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const WrapperContent = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   & button {
     margin-left: 2rem;
     animation: slide-in-bottom 1s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 `;
 
@@ -113,6 +119,12 @@ const WrapperSkillTimer = styled.div`
     border: none;
     cursor: pointer;
     animation: color-change 1s ease-in infinite;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+    width: 100%;
+    padding-right: 2rem;
   }
 
   @keyframes color-change {
