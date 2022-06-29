@@ -10,7 +10,8 @@ const Intro = () => {
       <h2>Aspiring Frontend Developer.</h2>
       <p>
         I started learning HTML & CSS back in 2021,{"\n"}
-        then I got into JavaScript and React and it <span className="green-span">clicked</span>!
+        then I got into JavaScript and React and it{" "}
+        <span className="green-span">clicked</span>!
       </p>
       <div>
         <ButtonL text="About me" />

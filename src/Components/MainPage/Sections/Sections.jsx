@@ -11,7 +11,7 @@ const Sections = () => {
     <Wrapper>
       <Intro />
       <About />
-      <Work />
+      {/* <Work /> */}
       <Contact />
       <Attribution />
     </Wrapper>
@@ -23,6 +23,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: static;
 
   animation: slide-in-bottom 0.7s 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;

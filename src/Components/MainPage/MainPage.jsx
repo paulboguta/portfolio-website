@@ -1,19 +1,15 @@
-import {React} from "react";
+import { React } from "react";
 import Header from "./Header/Header";
 import LeftIcons from "./LeftIcons/LeftIcons";
 import RightEmail from "./RightEmail/RightEmail";
 import Sections from "./Sections/Sections";
 import "./MainPage.scss";
 
-const MainPage = () => {
- 
-  
-
-
+const MainPage = (props) => {
   return (
-    <div className="main-page__wrapper">
+    <div className="main-page__wrapper ">
       <div className="header__wrapper">
-        <Header />
+        <Header clickHandler={props.clickHandler} />
       </div>
       <LeftIcons />
       <RightEmail />

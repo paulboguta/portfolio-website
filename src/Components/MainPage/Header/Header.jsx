@@ -1,18 +1,25 @@
-import React from 'react'
-import HeaderSection from './HeaderSection'
-import Button from '../../Constants/ButtonS'
-import "./Header.scss"
+import React, { useState } from "react";
+import HeaderSection from "./HeaderSection";
+import ButtonS from "../../Constants/ButtonS";
+import MenuMobile from "./MenuMobile";
+import Hamburger from "../../Constants/Hamburger";
+import "./Header.scss";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div className='header__wrapper'>
-    <HeaderSection href="#" num="01." name="About"/>
-    <HeaderSection href="#" num="02." name="Work"/>
-    <HeaderSection href="#" num="03." name="Contact"/>
-    <Button> Hey </Button>
-    </div>
-  )
-}
+    <React.Fragment>
+      <div className="header__wrapper mediaqueries-desktop">
+        <HeaderSection href="#" num="01." name="About" />
+        <HeaderSection href="#" num="02." name="Work" />
+        <HeaderSection href="#" num="03." name="Contact" />
+        <ButtonS></ButtonS>
+      </div>
 
+      <div className="mediaqueries-mobile ">
+        <Hamburger onClick={props.clickHandler} />
+      </div>
+    </React.Fragment>
+  );
+};
 
-export default Header
+export default Header;

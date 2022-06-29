@@ -1,22 +1,31 @@
 import { React, useState } from "react";
 import LandingPage from "../LandingPage/LandingPage";
 import MainPage from "../MainPage/MainPage";
+import MenuMobile from "../MainPage/Header/MenuMobile";
 import "./UI.scss";
 
 const UI = () => {
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
+  const [hamburgerClicked, setHamburgerClicked] = useState(false);
+
+  // const clickHandler = (e) => {
+  //   e.preventDefault();
+  //   setClicked((current) => !current);
+  // };
 
   const clickHandler = (e) => {
     e.preventDefault();
-    setClicked((current) => !current);
+    console.log("click");
+    setHamburgerClicked((current) => !current);
   };
 
   return (
-    <>
-      {clicked ? null : <LandingPage clickHandle={clickHandler} />}
-      {clicked ? <MainPage /> : null}
-      {/* <MainPage /> */}
-    </>
+    <div className="relative">
+      {/* {clicked ? null : <LandingPage clickHandle={clickHandler} />}
+      {clicked ? <MainPage /> : null} */}
+      <MainPage clickHandler={clickHandler} />
+      {hamburgerClicked && <MenuMobile />}
+    </div>
   );
 };
 

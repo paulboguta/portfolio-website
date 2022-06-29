@@ -23,10 +23,6 @@
   --font-poppins: "Poppins", sans-serif;
 }
 
-.hidden {
-  display: none;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -38,8 +34,9 @@ body {
   background-color: var(--navy);
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+ 
   font-family: "Open Sans", sans-serif;
+  
 }
 
 @keyframes slide-in-bottom {
@@ -77,4 +74,23 @@ p {
 .green-span {
   color: var(--green);
   font-family: var(--font-mono);
+}
+
+// universal classes
+
+
+.mediaqueries-mobile {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mediaqueries-desktop {
+  @media screen and (max-width: 768px) {
+    display :none;
+  }
+}
+
+.relative {
+  position: relative;
 }
