@@ -1,19 +1,16 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const GrayLine = () => {
-  return (
-    <Line />
-  )
-}
+const GrayLine = (props) => {
+  return <Line width={props.width} />;
+};
 
 const Line = styled.div`
   border: 0;
   background-color: var(--dark-slate);
-  width: 50%;
+  width: ${(props) => props.width};
   height: 1px;
   margin-left: 2rem;
 `;
 
-
-export default GrayLine
+export default GrayLine;

@@ -1,4 +1,5 @@
 import React from "react";
+import GrayLine from "../../../Constants/GrayLine";
 import { FiGithub } from "react-icons/fi";
 import styled from "styled-components";
 import { IconContext } from "react-icons/lib";
@@ -33,6 +34,8 @@ const ProjectMobile = (props) => {
           </IconContext.Provider>
         </WrapperIcons>
       </WrapperTextContent>
+
+      <GrayLine width="100%" />
     </Wrapper>
   );
 };

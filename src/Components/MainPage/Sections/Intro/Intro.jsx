@@ -23,7 +23,7 @@ const Intro = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 20rem;
 
   span {
     letter-spacing: 2px;
@@ -35,11 +35,13 @@ const Wrapper = styled.div`
   }
 
   div {
-    margin-top: 2rem;
+    margin-top: 6rem;
     align-self: center;
   }
 
   @media screen and (max-width: 768px) {
+    margin-top: 10rem;
+
     h1 {
       font-size: 3.6rem;
     }
@@ -47,9 +49,6 @@ const Wrapper = styled.div`
     h2 {
       font-size: 2rem;
       margin-bottom: 3rem;
-    }
-
-    p {
     }
   }
 `;

@@ -72,6 +72,10 @@ const About = () => {
 
 const Wrapper = styled.section`
   margin-top: 25rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 15rem;
+  }
 `;
 
 const WrapperText = styled.div`
