@@ -4,20 +4,17 @@ import MainPage from "../MainPage/MainPage";
 import "./UI.scss";
 
 const UI = () => {
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
 
   const clickHandler = (e) => {
     e.preventDefault();
-    setClicked(current => !current)
-    console.log("click!")
-  }
-  
+    setClicked((current) => !current);
+  };
 
-  
   return (
     <>
-      {clicked ? null : <LandingPage clickHandle={clickHandler}/>}
-        {clicked ? <MainPage /> : null}
+      {clicked ? null : <LandingPage clickHandle={clickHandler} />}
+      {clicked ? <MainPage /> : null}
       {/* <MainPage /> */}
     </>
   );
