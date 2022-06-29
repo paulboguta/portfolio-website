@@ -51,8 +51,10 @@ const Wrapper = styled.div`
       color: var(--green);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    left: 0.2rem;
+  }
 `;
-
-
 
 export default LeftIcons;
