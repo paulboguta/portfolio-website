@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import * as Scroll from "react-scroll";
 
 import SectionHeader from "../SectionHeader";
@@ -7,27 +7,7 @@ import styled from "styled-components";
 import ButtonL from "../../../Constants/ButtonL";
 
 const About = () => {
-  const [showSkills, setShowSkills] = useState(false);
   const [skillsClicked, setSkillsClicked] = useState(false);
-  const [timer, setTimer] = useState(20);
-
-  useEffect(() => {
-    let timer1 = setTimeout(() => setShowSkills(true), 20000);
-  }, []);
-
-  let performTimer = useEffect(() => {
-    if (timer > 0) {
-      setTimeout(() => {
-        setTimer(timer - 1);
-      }, 1000);
-    }
-  }, [timer]);
-
-  const clickTimerHandler = (e) => {
-    e.preventDefault();
-    setTimer(0);
-    setShowSkills(true);
-  };
 
   const clickSkillsHandler = (e) => {
     e.preventDefault();
@@ -57,18 +37,13 @@ const About = () => {
             building something folks can use. My end goal is to be full stack
             dev with MERN stack, so it has just begun for me.
           </p>
-          {skillsClicked ? <Skills /> : null}
+          {skillsClicked && <Skills />}
         </WrapperText>
-        <WrapperSkillTimer>
-          {showSkills ? null : (
-            <button className="timer" onClick={clickTimerHandler}>
-              {timer}:00
-            </button>
-          )}
-          {!skillsClicked && showSkills ? (
+        <WrapperSkillsBtn>
+          {!skillsClicked && (
             <ButtonL text="Skills" handleClick={clickSkillsHandler} />
-          ) : null}
-        </WrapperSkillTimer>
+          )}
+        </WrapperSkillsBtn>
       </WrapperContent>
     </Wrapper>
   );
@@ -111,41 +86,9 @@ const WrapperContent = styled.div`
   }
 `;
 
-const WrapperSkillTimer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-
-  .timer {
-    font-family: var(--font-mono);
-    color: var(--light-slate);
-    letter-spacing: 2px;
-    margin-left: 2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    animation: color-change 1s ease-in infinite;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin-top: 2rem;
-    width: 100%;
-    padding-right: 2rem;
-  }
-
-  @keyframes color-change {
-    0% {
-      color: var(--light-slate);
-    }
-    50% {
-      color: var(--green);
-    }
-    100% {
-      color: var(--light-slate);
-    }
-  }
+const WrapperSkillsBtn = styled.div`
+  padding-right: 3rem;
+  margin-top: 1rem;
 `;
 
 export default About;
