@@ -1,8 +1,17 @@
 import React from "react";
+import * as Scroll from "react-scroll";
 import styled from "styled-components";
 import ButtonL from "../../../Constants/ButtonL";
 
 const Intro = () => {
+  const scrollOnClickHandler = () => {
+    Scroll.scroller.scrollTo("scrollToAboutMe", {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+    });
+  };
+
   return (
     <Wrapper>
       <span className="green-span">Hi, my name is</span>
@@ -14,7 +23,7 @@ const Intro = () => {
         <span className="green-span">clicked</span>!
       </p>
       <div>
-        <ButtonL text="About me" />
+        <ButtonL text="About me" handleClick={scrollOnClickHandler} />
       </div>
     </Wrapper>
   );

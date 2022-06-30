@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import ButtonL from "../../../Constants/ButtonL";
 import SectionHeader from "../SectionHeader";
+import { Element } from "react-scroll";
 
 const Contact = () => {
   return (
     <Wrapper>
+      <Element name="scrollToContact" />
       <span className="green-span">What's Next?</span>
       <h1>Get In Touch</h1>
       <p>

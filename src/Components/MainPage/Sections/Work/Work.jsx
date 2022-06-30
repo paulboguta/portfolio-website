@@ -3,10 +3,12 @@ import SectionHeader from "../SectionHeader";
 import ProjectMobile from "./ProjectMobile";
 import Project from "./Project";
 import styled from "styled-components";
+import { Element } from "react-scroll";
 
 const Work = () => {
   return (
     <Wrapper>
+      <Element name="scrollToWork" />
       <SectionHeader number="02." name="Projects I've Built" />
       <div className="mediaqueries-mobile ">
         <ProjectMobile

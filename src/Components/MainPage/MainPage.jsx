@@ -7,10 +7,8 @@ import "./MainPage.scss";
 
 const MainPage = (props) => {
   return (
-    <div className="main-page__wrapper ">
-      <div className="header__wrapper">
-        <Header clickHandler={props.clickHandler} />
-      </div>
+    <div className="main-page__wrapper">
+      <Header clickHandler={props.clickHandler} />
       <LeftIcons />
       <RightEmail />
       <div className="sections__wrapper">

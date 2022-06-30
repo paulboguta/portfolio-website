@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import * as Scroll from "react-scroll";
 
 import SectionHeader from "../SectionHeader";
 import Skills from "./Skills";
@@ -34,8 +35,11 @@ const About = () => {
     setSkillsClicked(true);
   };
 
+  let Element = Scroll.Element;
+
   return (
     <Wrapper>
+      <Element name="scrollToAboutMe" />
       <SectionHeader number="01." name="About Me" />
       <WrapperContent>
         <WrapperText>
