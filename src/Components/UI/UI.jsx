@@ -5,13 +5,13 @@ import MenuMobile from "../MainPage/Header/MenuMobile";
 import "./UI.scss";
 
 const UI = () => {
-  // const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(false);
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
 
-  // const clickHandler = (e) => {
-  //   e.preventDefault();
-  //   setClicked((current) => !current);
-  // };
+  const clickHandler = (e) => {
+    e.preventDefault();
+    setClicked((current) => !current);
+  };
 
   const hamburgerHandler = (e) => {
     e.preventDefault();
@@ -21,9 +21,9 @@ const UI = () => {
 
   return (
     <div>
-      {/* {clicked ? null : <LandingPage clickHandle={clickHandler} />} */}
-      {/* {clicked ? <MainPage clickHandler={hamburgerHandler} /> : null} */}
-      <MainPage clickHandler={hamburgerHandler} />
+      {clicked ? null : <LandingPage clickHandle={clickHandler} />}
+      {clicked ? <MainPage clickHandler={hamburgerHandler} /> : null}
+
       {hamburgerClicked && <MenuMobile />}
     </div>
   );
