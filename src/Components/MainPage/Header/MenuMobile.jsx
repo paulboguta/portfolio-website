@@ -4,11 +4,13 @@ import HeaderSection from "./HeaderSection";
 
 const MenuMobile = () => {
   return (
-    <Wrapper>
-      <HeaderSection href="#" num="01." name="About" />
-      <HeaderSection href="#" num="02." name="Work" />
-      <HeaderSection href="#" num="03." name="Contact" />
-    </Wrapper>
+    <div className="mediaqueries-mobile">
+      <Wrapper>
+        <HeaderSection href="#" num="01." name="About" />
+        <HeaderSection href="#" num="02." name="Work" />
+        <HeaderSection href="#" num="03." name="Contact" />
+      </Wrapper>
+    </div>
   );
 };
 
