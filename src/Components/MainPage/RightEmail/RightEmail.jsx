@@ -5,7 +5,9 @@ import WhiteLine from "../../Constants/WhiteLine";
 const RightEmail = () => {
   return (
     <Wrapper>
-      <span>paul.boguta@gmail.com</span>
+      <a target="_blank" href="mailto:paul.boguta@gmail.com">
+        paul.boguta@gmail.com
+      </a>
       <WhiteLine />
     </Wrapper>
   );
@@ -25,7 +27,8 @@ const Wrapper = styled.div`
   animation: slide-in-bottom 0.5s 2.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
 
-  & span {
+  & a {
+    text-decoration: none;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: var(--lightest-slate);

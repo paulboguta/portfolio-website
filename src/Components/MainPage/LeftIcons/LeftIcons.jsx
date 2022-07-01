@@ -10,13 +10,16 @@ const LeftIcons = () => {
   return (
     <Wrapper>
       <IconContext.Provider value={{ className: "icons" }}>
-        <a>
+        <a target="_blank" href="https://github.com/paulboguta">
           <FiGithub />
         </a>
-        <a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/pawe%C5%82-boguta-54a800192/"
+        >
           <AiOutlineLinkedin />
         </a>
-        <a>
+        <a target="_blank" href="https://twitter.com/pawelboguta">
           <RiTwitterLine />
         </a>
         <WhiteLine />

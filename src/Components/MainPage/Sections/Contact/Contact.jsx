@@ -13,7 +13,9 @@ const Contact = () => {
       <p>
         I'm currently looking for a first job as jr. frontend developer. Say hi!
       </p>
-      <ButtonL text="Contact" />
+      <a target="_blank" href="mailto:paul.boguta@gmail.com">
+        <ButtonL text="Contact" />
+      </a>
     </Wrapper>
   );
 };
