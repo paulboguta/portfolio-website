@@ -10,7 +10,7 @@ const Work = () => {
     <Wrapper>
       <Element name="scrollToWork" />
       <SectionHeader number="02." name="Projects I've Built" />
-      <div className="mediaqueries-mobile ">
+      <div className="mediaqueries-mobile-work ">
         <ProjectMobile
           projectName="Test Project 1"
           description="Here I will add description for test project 1"
@@ -22,7 +22,7 @@ const Work = () => {
           tech={["react", "styled components", "redux", "nodejs"]}
         />
       </div>
-      <div className="mediaqueries-desktop ">
+      <div className="mediaqueries-desktop-work ">
         <Project
           projectName="Test Project 1"
           description="Here I will add description for test project 1"

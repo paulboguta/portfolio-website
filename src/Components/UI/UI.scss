@@ -91,6 +91,18 @@ p {
   }
 }
 
+.mediaqueries-mobile-work {
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+}
+
+.mediaqueries-desktop-work {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
 .relative {
   position: relative;
 }
