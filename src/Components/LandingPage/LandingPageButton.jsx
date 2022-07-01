@@ -13,19 +13,15 @@ const Button = styled.button`
   align-items: center;
   background-color: #fcfcfd;
   border-radius: 4px;
-  border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  box-sizing: border-box;
   color: #36395a;
-  cursor: pointer;
   display: inline-flex;
   height: 48px;
   justify-content: center;
   line-height: 1;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
+  padding-inline: 16px;
+  cursor: pointer;
   transition: box-shadow 0.15s, transform 0.15s;
 
   @media screen and (max-width: 768px) {
@@ -64,7 +60,7 @@ const Button = styled.button`
   &:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
       rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-    transform: scale(105%);
+    transform: scale(95%);
   }
 
   &:active {
